@@ -1,5 +1,5 @@
 package model.output
 
-class ProcessorResults {
+abstract class ProcessorResults : MutableCollection<ProcessorResult> {
     private lateinit var results : List<ProcessorResult>
 }

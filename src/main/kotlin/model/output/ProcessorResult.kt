@@ -1,6 +1,7 @@
 package model.output
 
-data class ProcessorResult(
-    var reference: String,
-    var description: String
-)
+class ProcessorResult {
+
+    var reference: String? = null
+    var description: String? = null
+}
