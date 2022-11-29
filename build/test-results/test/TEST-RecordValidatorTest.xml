@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RecordValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-29T13:32:47" hostname="WINAPMSSGFD6MOB" time="0.035">
+<testsuite name="RecordValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-29T13:59:09" hostname="WINAPMSSGFD6MOB" time="0.043">
   <properties/>
-  <testcase name="testValidate()" classname="RecordValidatorTest" time="0.035"/>
+  <testcase name="testValidate()" classname="RecordValidatorTest" time="0.043"/>
   <system-out><![CDATA[[ProcessorResult(reference=00, description=Repeated reference), ProcessorResult(reference=00, description=Repeated reference), ProcessorResult(reference=01, description=End balance incorrect), ProcessorResult(reference=03, description=Start balance below zero), ProcessorResult(reference=04, description=End balance below zero), ProcessorResult(reference=05, description=Transaction date in the future (year 2050))]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
