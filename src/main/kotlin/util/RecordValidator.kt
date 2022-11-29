@@ -12,11 +12,13 @@ class RecordValidator {
 
     fun validate(records: Records) : List<ProcessorResult> {
 
-        val references : List<String> = records.getRecords().parallelStream().map { record -> record.reference } .collect(Collectors.toList())
+        val references : List<String> = records
+            .getRecords().parallelStream().map { record -> record.reference } .collect(Collectors.toList())
 
         return records.getRecords()
             .parallelStream()
-            .filter { record -> isReferenceNotUnique(references, record) || isEndBalanceIncorrect(record) || isStartBalanceNegative(record) || isEndBalanceNegative(record) || isFutureDate(record)}
+            .filter { record -> isReferenceNotUnique(references, record) || isEndBalanceIncorrect(record) ||
+                    isStartBalanceNegative(record) || isEndBalanceNegative(record) || isFutureDate(record)}
             .map{ record -> addResult(record)}
             .collect(Collectors.toList())
     }

@@ -5,19 +5,23 @@ import util.RecordValidator
 import java.math.BigDecimal
 import java.time.LocalDate
 import org.junit.jupiter.api.Assertions.assertEquals
+import util.csv.csvWriter
+import kotlin.test.assertTrue
 
 class RecordValidatorTest {
 
+    val records = Records()
+    val validator = RecordValidator()
+    val csvWriter = csvWriter()
+
     @Test
     fun testValidate() {
-        var records = Records()
-        var validator = RecordValidator()
-
         records.setRecord(getDummyRecords())
+        val results = validator.validate(records)
 
-        println(validator.validate(records))
+        csvWriter.writeCsvFile(results, "src/main/resources/testDummyRecords.csv")
 
-        assertEquals(6, validator.validate(records).size)
+        assertEquals(6, results.size)
     }
 
     private fun getDummyRecords() : List<Record> {
