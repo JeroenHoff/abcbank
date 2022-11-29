@@ -10,14 +10,6 @@ import java.util.stream.Collectors
 
 class RecordValidator {
 
-//    fun validate(records: Records) : List<ProcessorResult> {
-//        return records
-//            .parallelStream()
-//            .filter { record -> isReferenceUnique(records, record) || isEndBalanceCorrect(record) || isStartBalanceZeroOrPositive(record) || isEndBalanceZeroOrPositive(record)}
-//            .map{ record -> addResult(record)}
-//            .collect(Collectors.toList())
-//    }
-
     fun validate(records: Records) : List<ProcessorResult> {
 
         val references : List<String> = records.getRecords().parallelStream().map { record -> record.reference } .collect(Collectors.toList())
