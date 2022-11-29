@@ -2,6 +2,7 @@ package model.input
 
 import java.math.BigDecimal
 import java.time.LocalDate
+
 data class Record (
     val reference: String,
     val accountNumber: String,

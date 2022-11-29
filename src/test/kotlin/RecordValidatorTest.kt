@@ -6,12 +6,10 @@ import java.math.BigDecimal
 import java.time.LocalDate
 import org.junit.jupiter.api.Assertions.assertEquals
 
-
 class RecordValidatorTest {
 
     @Test
     fun testValidate() {
-
         var records = Records()
         var validator = RecordValidator()
 
