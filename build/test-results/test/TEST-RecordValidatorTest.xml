@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RecordValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-30T10:59:19" hostname="WINAPMSSGFD6MOB" time="0.222">
+<testsuite name="RecordValidatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-11-30T11:41:54" hostname="WINAPMSSGFD6MOB" time="0.313">
   <properties/>
-  <testcase name="testXmlRecordsValidate()" classname="RecordValidatorTest" time="0.222"/>
+  <testcase name="testXmlRecordsValidate()" classname="RecordValidatorTest" time="0.279"/>
+  <testcase name="testDummyRecordsValidate()" classname="RecordValidatorTest" time="0.006"/>
+  <testcase name="testCsvRecordsValidate()" classname="RecordValidatorTest" time="0.019"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

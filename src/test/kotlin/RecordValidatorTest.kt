@@ -41,7 +41,7 @@ class RecordValidatorTest {
         val results = validator.validate(records)
 
         assertEquals(3, results.size)
-        csvWriter.writeCsvFile(results, "src/main/resources/csvRecordsReport.csv")
+        csvWriter.writeCsvFile(results, "src/main/resources/xmlRecordsReport.csv")
     }
 
     private fun getDummyRecords() : List<Record> {

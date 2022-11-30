@@ -1,4 +1,4 @@
-reference,accountNumber,description,startBalance,mutation,endBalance,transactionDate
+Reference,Account Number,Description,Start Balance,Mutation,End Balance, Transaction Date
 177666,NL93ABNA0585619023,Flowers for Rik Theu�,44.85,-22.24,22.61,2015-08-12
 112806,NL69ABNA0433647324,Subscription for Jan Theu�,45.59,+48.18,93.77,2014-04-15
 158338,NL91RABO0315273637,Tickets for Vincent King,12.76,-39.5,-26.74,2009-10-21
