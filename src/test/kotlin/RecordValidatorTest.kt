@@ -1,13 +1,13 @@
 import model.input.Record
 import model.input.Records
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import util.RecordValidator
 import java.math.BigDecimal
 import java.time.LocalDate
-import org.junit.jupiter.api.Assertions.assertEquals
 import util.csv.CsvRecordCollector
-import util.csv.csvReader
 import util.csv.csvWriter
+import util.xml.XmlRecordCollector
 
 class RecordValidatorTest {
 
@@ -15,6 +15,7 @@ class RecordValidatorTest {
     val validator = RecordValidator()
     val csvWriter = csvWriter()
     val csvRecordCollector = CsvRecordCollector()
+    val xmlRecordCollector = XmlRecordCollector()
 
     @Test
     fun testDummyRecordsValidate() {
@@ -31,6 +32,15 @@ class RecordValidatorTest {
         val results = validator.validate(records)
 
         assertEquals(5, results.size)
+        csvWriter.writeCsvFile(results, "src/main/resources/csvRecordsReport.csv")
+    }
+
+    @Test
+    fun testXmlRecordsValidate() {
+        records.setRecord(xmlRecordCollector.getRecords("src/main/resources/records.xml"))
+        val results = validator.validate(records)
+
+        assertEquals(3, results.size)
         csvWriter.writeCsvFile(results, "src/main/resources/csvRecordsReport.csv")
     }
 
